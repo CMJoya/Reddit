@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
+  root 'posts#index'
+
   resources :posts
-  
   # get 'posts' => 'posts#index', as: :posts
   # get 'posts/new' => 'post#new', as: :new_post
   # get 'posts/:id' => 'posts#show', as: :post
