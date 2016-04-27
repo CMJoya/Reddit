@@ -3,7 +3,12 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :posts
+  resources :posts do
+    member do
+      put 'like',    to: 'posts#upvote'
+      put 'dislike', to: 'posts#downvote'
+    end
+  end
   # get 'posts' => 'posts#index', as: :posts
   # get 'posts/new' => 'post#new', as: :new_post
   # get 'posts/:id' => 'posts#show', as: :post
