@@ -2,7 +2,7 @@
   <div class="link row clearfix">
     <h2>
       <%= link_to post.title, post %><br>
-      <small class= "author"> Submitted by: <%= post.user.username %> <%= time_ago_in_words(post.created_at) %> </small>
+      <small class= "author"> Submitted by: <%= post.user.name %> <%= time_ago_in_words(post.created_at) %> </small>
     </h2>
     <div class="btn-group">
       <a class="btn btn-default btn-sm" href="<%= post.url %>">Visit Link</a>

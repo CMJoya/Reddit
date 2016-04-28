@@ -1,7 +1,10 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+if User.count == 0
+  User.create name: "Faker::Superhero.name"
+  User.create name: "Faker::Superhero.name"
+end
+
+if Post.count == 0
+  Post.create title: "Faker::Company.bs", url: "https://github.com/CMJoya/Iron-Library.git", user_id: 1
+  Post.create title: "Faker::Company.bs", url: "https://github.com/CMJoya/Week-7-Lab.git", user_id: 1
+  Post.create title: "Faker::Company.bs", url: "https://github.com/CMJoya/Mallory-Furniture.git", user_id: 2
+end

@@ -4,8 +4,8 @@
   <%= devise_error_messages! %>
 
   <div class="form-group">
-    <%= f.label :username %><br />
-    <%= f.text_field :username, class: "form-control", autofocus: true %>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control", autofocus: true %>
   </div>
 
   <div class="form-group">
@@ -27,7 +27,7 @@
   </div>
 
   <div class="form-group">
-    <%= f.submit "Sign up", class: "btn btn-lg btn-primary" %>
+    <%= f.submit "Sign up", class: "btn btn-lg btn-success" %>
   </div>
 <% end %>
 
