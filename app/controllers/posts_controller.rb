@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order("view_count DESC")
   end
 
   def show
@@ -43,12 +43,14 @@ class PostsController < ApplicationController
   def upvote
     @post = Post.find(params[:id])
     @post.upvote_by current_user
+    @post.update view_count: (@post.view_count + 1)
     redirect_to :back
   end
 
   def downvote
     @post = Post.find(params[:id])
     @post.downvote_by current_user
+    @post.update view_count: (@post.view_count - 1)
     redirect_to :back
   end
 
