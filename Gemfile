@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.3.0'
+
 gem 'rails', '4.2.5.2'
 gem 'pg', '~> 0.15'
 gem 'sass-rails', '~> 5.0'
@@ -25,3 +27,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'faker', '~> 1.6', '>= 1.6.3'
+
+group :production do
+  gem 'rails_12factor'
+end
