@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   # patch 'posts/:id' => 'posts#update'
   # put 'posts/:id' => 'posts#update'
   # delete 'posts/:id' => 'posts#delete'
-  resources :comments
+
   # get 'comments' => 'comments#index', as: :comments
   # get 'comments/new' => 'comments#new', as: :new_comment
   # get 'comments/:id' => 'comments#show', as: :comment
