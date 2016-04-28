@@ -59,8 +59,12 @@ class PostsController < ApplicationController
     def set_post
       @post = Post.find(params[:id])
     end
+    def authorized_user
+      @post = current_user.posts.find_by(id: params[:id])
+      redirect_to posts_path, notice: "Not authorized to edit this link" if @post.nil?
+    end
 
     def post_params
-      params.require(:post).permit(:title, :url)
+      params.require(:post).permit(:title, :url, :name)
     end
 end
