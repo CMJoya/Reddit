@@ -1,4 +1,4 @@
-README
+Joya-Reddit
 ==
 Build Reddit (bookmarks and voting in Rails using Forms and relationships)
 
