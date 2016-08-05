@@ -15,14 +15,15 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    @comment = Comment.find_by id: params[:id]
     @comment.destroy
-      redirect_to :back, notic: "Comment wa successfully deleted."
+      redirect_to :back, notic: "Comment was successfully deleted."
   end
 
   private
 
   def set_comment
-    @comment - Comment.find(params[:id])
+    @comment = Comment.find(params[:id])
   end
 
   def comment_params
