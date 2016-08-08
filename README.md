@@ -2,7 +2,9 @@ Joya-Reddit
 ==
 Build Reddit (bookmarks and voting in Rails using Forms and relationships)
 
-Learning Objectives :
+Features:
+
+* Ruby Version 2.3.0
 
 * Be able to utilize Forms in Rails
 
@@ -25,6 +27,12 @@ Learning Objectives :
 * Faker(https://github.com/stympy/faker)
 
 * Acts_As_Votable(https://github.com/ryanto/acts_as_votable)
+
+Database Creation & Initialization
+==
+* rake db:create
+* rake db:migrate
+* rake db:seed
 
 Home Page
 ==
